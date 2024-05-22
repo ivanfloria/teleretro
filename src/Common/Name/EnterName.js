@@ -41,7 +41,7 @@ const EnterName = () => {
             value: session
         })
         if(session != "" || session != 0){
-            navigate('/history')
+            navigate('/history/1')
         }
     },[session])
 

@@ -20,7 +20,7 @@ const Logo = styled.img`
 const Header = () => {
     return(
         <Container>
-            <Logo src="logo.png" />
+            <Logo src="/logo.png" />
             <InstructionsButton text='Ver instrucciones' />
         </Container>
     )

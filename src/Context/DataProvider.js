@@ -10,6 +10,7 @@ const useDataContext = () => {
 const initialState = {
     sessionID: 0,
     name: '',
+    showModal: false,
 }
 
 const reducer = (state,action) => {
@@ -26,6 +27,11 @@ const reducer = (state,action) => {
                 name: action.value
             }
         }
+        case 'CHANGE_MODAL':
+            return{
+                ...state,
+                showModal: action.value
+            }
     }
     return state;
 }

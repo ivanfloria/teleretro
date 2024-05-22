@@ -2,8 +2,7 @@
 import { Routes, Route } from "react-router-dom"
 
 import Header from "./Common/Header/Header";
-import EnterName from "./Common/Name/EnterName";
-import History from './HistoryMode/History';
+import InfoRoutes from "./InfoRoutes";
 
 import styled from "styled-components";
 
@@ -30,10 +29,7 @@ const Home = () => {
     return(
         <Container>
             <Header />
-            <Routes>
-                <Route path="/" element={ <EnterName /> } />
-                <Route path="history" element={ <History /> } />
-            </Routes>
+            <InfoRoutes />
         </Container>
     )
 }

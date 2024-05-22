@@ -10,24 +10,27 @@ const Container = styled.div`
     position: relative;
     width: 1200px;
     height: auto;
-    padding-top: 200px;
+    padding-top: 50px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 `
 const H1 = styled.h1`
     font-size: 2rem;
     color: #fff;
     margin: 0px;
+    text-align: center;
 `
 const Holder = styled.div`
+    width: 100%;
     max-width: 600px;
     height: auto;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     /* @media only screen and (max-width: 768px) {
         flex-direction: column;
     } */
@@ -36,19 +39,14 @@ const Holder = styled.div`
 const History = () => {
     
     const {name} = useDataContext();
-
-    let id = 1;
+    let {id} = useParams()
 
     return(
         <Container>
             <H1>Despierta tus recuerdos dormidos, {name}</H1>
             <Holder>
-                <SerialCard
-                    id={id}
-                    mode={"historia"}
-                />
+                <SerialCard id={id}/>
             </Holder>
-
         </Container>
     )
 }
