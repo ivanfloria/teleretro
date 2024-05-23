@@ -6,18 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import NameField from "./NameField";
 
-import styled from "styled-components";
-
-const Container = styled.div`
-    position: relative;
-    width: 1200px;
-    height: auto;
-    padding-top: 200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+import {Container} from "../../styledComponents/StyledEnterName"
 
 const EnterName = () => {
     const [name,setName] = useState()
@@ -29,7 +18,7 @@ const EnterName = () => {
         if(name){
             createSession(name)
             dispatch({
-                type: 'ADD_NAME',
+                type: 'ADD_USERNAME',
                 value: name
             })
         }

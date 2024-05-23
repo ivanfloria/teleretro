@@ -9,8 +9,9 @@ const useDataContext = () => {
 
 const initialState = {
     sessionID: 0,
-    name: '',
+    userName: '',
     showModal: false,
+    progressData: {},
 }
 
 const reducer = (state,action) => {
@@ -21,17 +22,18 @@ const reducer = (state,action) => {
                 sessionID: action.value
             }
         }
-        case 'ADD_NAME': {
+        case 'ADD_USERNAME': {
             return{
                 ...state,
-                name: action.value
+                userName: action.value
             }
         }
-        case 'CHANGE_MODAL':
+        case 'CHANGE_MODAL': {
             return{
                 ...state,
                 showModal: action.value
             }
+        }
     }
     return state;
 }
