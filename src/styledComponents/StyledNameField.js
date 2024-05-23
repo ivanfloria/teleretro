@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 1200px;
+    width: calc(100% - 20px);
+    max-width: 1200px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,8 @@ export const InputContainer = styled.div`
     justify-content: center;
 `
 export const Input = styled.input`
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     padding: 1rem 1.5rem;
     box-sizing: border-box;
@@ -39,6 +41,10 @@ export const H1 = styled.h1`
     font-size: 3.5rem;
     color: #fff;
     margin: 0px;
+    @media only screen and (max-width: 768px) {
+        font-size: 2.5rem;
+        text-align: center;
+    }
 `
 export const H2 = styled.h2`
     font-size: 1.75rem;
@@ -46,6 +52,10 @@ export const H2 = styled.h2`
     font-weight: 400;
     text-align: center;
     margin: 0.5rem 0px;
+    @media only screen and (max-width: 768px) {
+        font-size: 1.50rem;
+        text-align: center;
+    }
 `
 export const H3 = styled.h3`
     font-size: 1.3rem;
